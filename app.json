@@ -8,6 +8,17 @@
       "expo-router"
     ],
     "name": "react_native_jobs",
-    "slug": "react_native_jobs"
+    "slug": "react_native_jobs",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "cc033e54-5272-477c-946c-873ecb7fd01c"
+      }
+    },
+    "android": {
+      "package": "com.ganesh_utla.react_native_jobs"
+    }
   }
 }
