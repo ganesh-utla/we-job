@@ -3,12 +3,10 @@ import {Modal, Text, View, TouchableOpacity, TextInput, Image, ToastAndroid} fro
 import styles from './profilemodal.style';
 import { icons } from "../../../constants";
 import { storage } from '../../../utils/storage';
-import { useRouter } from 'expo-router';
 
 const ProfileModal = ({modalVisible, setModalVisible, username, setUsername}) => {
 
     const [changeName, setChangeName] = useState(false);
-    const router = useRouter();
 
     const showToast = (text) => {
         ToastAndroid.showWithGravity(

@@ -1,9 +1,8 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import { RAPID_API_KEY } from "@env";
 
-const rapidApiKey = "YOUR_JSEARCH_API";
+const rapidApiKey = "80a948574fmsh5676ccf6ef9c454p17718cjsneff8135f3b7d";
 
 const useFetch = (endpoint, query) => {
 

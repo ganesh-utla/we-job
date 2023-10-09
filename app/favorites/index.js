@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { View, Text, SafeAreaView, ActivityIndicator, ScrollView, TouchableOpacity } from 'react-native';
-import { Stack, useRouter, useGlobalSearchParams } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { icons, COLORS, SIZES } from '../../constants';
 import styles from "../../styles/favorites";
 import { ScreenHeaderBtn, ClearModal, FavoriteCard } from '../../components';
-import { jobs } from '../../constants/jobs';
 import { storage } from '../../utils/storage';
 
 
@@ -22,9 +21,7 @@ const index = () => {
     const handleSearch = async () => {
         setTimeout(() => {
             setIsLoading(false);
-            // setFavoritesList(jobs);
             let curFavorites = [];
-            // storage.clearMap();
             storage.load({
                 key: 'favorites',
                 autoSync: true,

@@ -6,15 +6,10 @@ import { COLORS } from '../../../constants';
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 import useFetch from '../../../hook/useFetch';
 import { useRouter } from 'expo-router';
-import { jobs } from '../../../constants/jobs'; // mock data
 
 const Nearbyjobs = () => {
 
   const router = useRouter();
-  
-  // const isLoading = false;
-  // const error = false;
-  // const data = jobs;
 
   const { data, isLoading, error } = useFetch(
     'search',

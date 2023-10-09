@@ -2,13 +2,21 @@
   "expo": {
     "scheme": "acme",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
     ],
-    "name": "react_native_jobs",
+    "name": "WeJob",
     "slug": "react_native_jobs",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fafafc"
+    },
     "extra": {
       "router": {
         "origin": false
@@ -18,7 +26,11 @@
       }
     },
     "android": {
-      "package": "com.ganesh_utla.react_native_jobs"
+      "package": "com.ganesh_utla.react_native_jobs",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fafafc"
+      }
     }
   }
 }

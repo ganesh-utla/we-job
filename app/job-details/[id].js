@@ -4,7 +4,6 @@ import { COLORS, SIZES, icons } from '../../constants'
 import { Stack, useGlobalSearchParams, useRouter } from 'expo-router'
 import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics } from '../../components'
 import useFetch from '../../hook/useFetch';
-import { jobs } from '../../constants/jobs'; // mock data
 
 
 const JobDetails = () => {
@@ -18,21 +17,6 @@ const JobDetails = () => {
             job_id: params.id,
         }
     );
-    
-    // For mock purpose
-
-    // const isLoading = false;
-    // const error = false;
-    // const [data, setData] = useState([{}]);
-
-    // useEffect(() => {
-    //     for(let i=0; i<jobs.length; i++) {
-    //         if (params.id==jobs[i].job_id) {
-    //             setData([jobs[i]]);
-    //             break;
-    //         }
-    //     }
-    // }, []);
 
     const tabs = ["About", "Qualifications", "Responsibilities"];
 
@@ -43,7 +27,7 @@ const JobDetails = () => {
     
     const onRefresh = useCallback(() => {
         setRefreshing(true);
-        // refetch();
+        refetch();
         setRefreshing(false);
     }, []);
 

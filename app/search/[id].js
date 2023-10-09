@@ -7,7 +7,6 @@ import axios from 'axios'
 import { ScreenHeaderBtn, NearbyJobCard } from '../../components'
 import { COLORS, icons, SIZES } from '../../constants'
 import styles from '../../styles/search'
-import { jobs } from '../../constants/jobs' // mock data
 
 const JobSearch = () => {
     const params = useGlobalSearchParams();
@@ -27,7 +26,7 @@ const JobSearch = () => {
                 method: "GET",
                 url: `https://jsearch.p.rapidapi.com/search`,
                 headers: {
-                    "X-RapidAPI-Key": 'YOUR_JSEARCH_API',
+                    "X-RapidAPI-Key": '80a948574fmsh5676ccf6ef9c454p17718cjsneff8135f3b7d',
                     "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
                 },
                 params: {
@@ -38,8 +37,6 @@ const JobSearch = () => {
 
             const response = await axios.request(options);
             setSearchResult(response.data.data);
-
-            // setSearchResult(jobs); // mock data
 
         } catch (error) {
             setSearchError(error);

@@ -6,22 +6,16 @@ import { COLORS, SIZES } from '../../../constants';
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 import useFetch from '../../../hook/useFetch';
 import { useRouter } from 'expo-router';
-import { jobs } from '../../../constants/jobs'; // mock data
 
 const Popularjobs = () => {
 
   const { data, isLoading, error } = useFetch(
     'search',
     {
-      query: "React Developer",
+      query: "Software Developer",
       num_pages: 1
     }
   );
-
-  
-  // const isLoading = false;
-  // const error = false;
-  // const data = jobs;
 
   const router = useRouter();
 
@@ -38,7 +32,7 @@ const Popularjobs = () => {
         <Text style={styles.headerTitle}>
           Popular Jobs
         </Text>
-        <TouchableOpacity onPress={() => router.push('/search/React%20Developer')}>
+        <TouchableOpacity onPress={() => router.push('/search/Software%20Developer')}>
           <Text style={styles.headerBtn}>
             Show all
           </Text>

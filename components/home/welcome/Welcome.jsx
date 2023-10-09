@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native';
 
 import styles from './welcome.style';
 import { SIZES, icons } from '../../../constants';
 import { useRouter } from 'expo-router';
-import { storage } from '../../../utils/storage';
 
 const Welcome = ({ username, searchTerm, setSearchTerm, handleSearch }) => {
 
