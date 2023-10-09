@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const rapidApiKey = "80a948574fmsh5676ccf6ef9c454p17718cjsneff8135f3b7d";
+const rapidApiKey = "YOUR_JSEARCH_API";
 
 const useFetch = (endpoint, query) => {
 
